@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Where to Buy - Bhutan Behind the Curtain</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Bhutan Behind the Curtain <span class="author-name">| Balaram Poudyal</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="buy.html">Where to Buy</a></li>
+        <li><a href="acknowledgements.html">Acknowledgements</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="section">
+    <h2 class="section-title">Where to Buy</h2>
+    <div class="buy-links">
+      <a href="https://www.tiktok.com/view/product/1731493978291278081" target="_blank" rel="noopener noreferrer" class="btn-primary">Get Your Copy</a>
+      <p>We will release more options soon.</p>
+    </div>
+
+    <div class="buy-slideshow">
+      <div class="slide active">
+        <img src="buyImage/image1.webp" alt="Book Image 1">
+      </div>
+      <div class="slide">
+        <img src="buyImage/image2.webp" alt="Book Image 2">
+      </div>
+      <div class="slide">
+        <img src="buyImage/image4.webp" alt="Book Image 4">
+      </div>
+	    <div class="slide">
+        <img src="buyImage/image5.webp" alt="Book Image 5">
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Bhutan Behind the Curtain. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Slideshow JavaScript
+    const slides = document.querySelectorAll('.buy-slideshow .slide');
+    let currentSlide = 0;
+
+    function showNextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(showNextSlide, 3000); // Change every 3 seconds
+  </script>
+</body>
+</html>

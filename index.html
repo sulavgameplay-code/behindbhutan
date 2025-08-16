@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhutan Behind the Curtain</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Bhutan Behind the Curtain <span class="author-name">| Balaram Poudyal</span></a>
+      <ul class="nav-links">
+	      <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+		    <li><a href="media.html">Media</a></li>
+        <li><a href="buy.html">Where to Buy</a></li>
+        <li><a href="acknowledgements.html">Acknowledgements</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Bhutan Behind the Curtain</h1>
+      <p>A compelling journey into the hidden truths of the world’s happiest kingdom.</p>
+      <a href="buy.html" class="btn-primary">Get Your Copy</a>
+	  
+    </div>
+	 <section class="slideshow-container section">
+    <h2 class="section-title">A Glimpse Inside</h2>
+    <div class="slideshow">
+      <div class="slide fade">
+        <img src="coverEng.jpg" alt="Book Image English Cover">
+      </div>
+      <div class="slide fade">
+        <img src="coverNep.jpg" alt="Book Image Nepali Cover">
+      </div>
+     <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+    </div>
+  </section>
+  </header>
+
+ 
+
+  <section class="section">
+    <h2 class="section-title">About the Book</h2>
+    <p>
+      This eye-opening book uncovers the complexities behind Bhutan’s public image, exploring the untold stories that paint a fuller picture of this unique kingdom.
+    </p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Bhutan Behind the Curtain. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Slideshow JavaScript
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      if (slides.length > 0) {
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    }
+  </script>
+</body>
+</html>

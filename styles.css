@@ -1,0 +1,438 @@
+/* General Body and Container Styles */
+body {
+  font-family: Arial, sans-serif; /* Keep a clean, readable font */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* A soft off-white background for general content */
+  color: #333; /* Dark gray for general text */
+}
+
+/* Navigation Bar */
+.navbar {
+  background-color: #003366; /* Deep blue from cover */
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add a subtle shadow for depth */
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto; /* Allows horizontal scrolling on small screens */
+  margin: 2rem auto;
+  max-width: 960px; /* Constrain table width */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.contributors-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders between cells */
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.contributors-table th,
+.contributors-table td {
+  padding: 15px 20px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+.contributors-table th {
+  background-color: #003366; /* Deep blue for header background */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Style for odd rows (zebra striping) */
+.contributors-table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+/* Hover effect on rows */
+.contributors-table tbody tr:hover {
+  background-color: #eef;
+}
+
+/* Rounded corners for the table (adjust if full borders interfere with visuals) */
+.contributors-table thead tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+.contributors-table thead tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+.contributors-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+.contributors-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+
+/* Responsive adjustments for tables */
+@media (max-width: 768px) {
+  .contributors-table th,
+  .contributors-table td {
+    padding: 10px 15px;
+  }
+
+  .contributors-table {
+    font-size: 0.85rem; /* Smaller font on small screens */
+  }
+}
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.5rem; /* Slightly larger for prominence */
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px; /* Slight letter spacing for readability */
+}
+
+.author-name {
+    font-size: 0.9rem;
+    font-weight: normal;
+    color: #A0D0ED;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem; /* Slightly more space between links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #CCCC99; /* Muted gold for hover state */
+}
+
+/* Hero Section (index.html) */
+.hero {
+  background: linear-gradient(to bottom, #A0D0ED, #003366); /* Gradient from light to deep blue */
+  color: white;
+  text-align: center;
+  padding: 8rem 2rem;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #CCCC99; /* Muted gold for primary button */
+  color: #003366; /* Deep blue text on button */
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #F0E68C; /* Lighter gold on hover */
+  color: #001a33; /* Even darker blue on hover text for contrast */
+}
+
+/* New small button style for media links */
+.btn-primary-small {
+  display: inline-block;
+  background-color: #CCCC99; /* Muted gold for button */
+  color: #003366; /* Deep blue text on button */
+  padding: 0.5rem 1rem; /* Smaller padding */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+.btn-primary-small:hover {
+  background-color: #F0E68C; /* Lighter gold on hover */
+  color: #001a33;
+}
+
+
+/* Section Styles */
+.section {
+  padding: 4rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white; /* Keep content sections white */
+  border-bottom: 1px solid #eee; /* Subtle separator */
+}
+
+.section-light {
+  background-color: #f9f9f9; /* Slightly off-white for variation */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: #003366; /* Deep blue for section titles */
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #A0D0ED; /* Lighter blue underline */
+}
+
+.section-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Buy Links (buy.html) */
+.buy-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
+.buy-button {
+  display: inline-block;
+  width: 250px; /* Fixed width for consistency */
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buy-button.amazon {
+  background-color: #FF9900; /* Amazon's orange */
+  color: white;
+}
+
+.buy-button.amazon:hover {
+  background-color: #e68a00;
+}
+
+.buy-button.barnes {
+  background-color: #FFCC00; /* Barnes & Noble's yellow */
+  color: #333; /* Dark text for contrast */
+}
+
+.buy-button.barnes:hover {
+  background-color: #e6b800;
+}
+
+.buy-button.depository {
+  background-color: #006699; /* A blue for Book Depository, similar to the cover */
+  color: white;
+}
+
+.buy-button.depository:hover {
+  background-color: #004d73;
+}
+
+/* Media Page Specific Styles */
+.media-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.media-item {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.media-item h4 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #003366;
+}
+
+.media-item p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.video-item .video-placeholder {
+  margin: 1.5rem 0;
+}
+
+/* Slideshow Styling (index.html, acknowledgements.html) */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container .slide {
+  display: none;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Slideshow Styling (buy.html) - New and improved */
+.buy-slideshow {
+    max-width: 600px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.buy-slideshow .slide {
+    display: none;
+    transition: opacity 1s ease-in-out;
+}
+
+.buy-slideshow .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Ensure only one slide is active at a time */
+.buy-slideshow .slide.active {
+    display: block;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #1a1a1a; /* Very dark gray/black for footer */
+  color: #bbb; /* Lighter gray for footer text */
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .buy-button {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+
+  /* Iframe responsiveness */
+  .video-placeholder iframe {
+      width: 100%;
+      height: 300px; /* Adjust height for smaller screens */
+  }
+}
